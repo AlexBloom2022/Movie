@@ -13,8 +13,10 @@ public class MovieManager {
     public MovieManager(int newItemsLength) {
         this.newItemsLength = newItemsLength;
     }
+
     public MovieManager() {
     }
+
     public void save(MovieItem item) {
         int length = items.length + 1;
         MovieItem[] tmp = new MovieItem[length];
@@ -23,10 +25,12 @@ public class MovieManager {
         tmp[lastIndex] = item;
         items = tmp;
     }
-    public MovieItem[] showAll() {
+
+    public MovieItem[] FindAll() {
         return items;
     }
-    public MovieItem[] showAllReverse() {
+
+    public MovieItem[] FindLast() {
         int resultLength = items.length;
         if (resultLength > newItemsLength) {
             resultLength = newItemsLength;
